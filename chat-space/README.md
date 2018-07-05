@@ -22,3 +22,52 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## message テーブル
+## ・誰が送ったか (user_id ; integer)
+## ・どのグループで送ったか(group_id; integer)
+## ・どのような内容か（画像・テキスト)
+## body、image は null: false,を外した。
+## foreign_key は 他のテーブルと関係している場合
+## foreign_keyがない場合は空白でもいいのか？
+## いつ送ったかは自動的にデータに付与されるのでテーブルは必要ない
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|body|text|  |
+|image|string|  |
+
+
+## create account テーブル
+##    ・name (null: false, foreign_key: true)
+## Columnは自由につけられる
+## Type が不安
+## Email Password はdeviceにあるので必要ない
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+
+
+## 新規チャットグループ テーブル
+##  グループ名
+##  チャットメンバー
+
+|Column|Type|Options|
+|------|----|-------|
+|group_name|text|null: false, foreign_key: true|
+|member|string|null: false, foreign_key: true|
+
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
