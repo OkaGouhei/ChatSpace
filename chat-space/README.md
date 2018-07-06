@@ -56,11 +56,9 @@ Things you may want to cover:
 
 ## groupsテーブル
 ##  グループ名
-##  チャットメンバー
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
-|member|string|null: false, foreign_key: true|
 ### Association
 - has_many :users
 - has_many :messages
