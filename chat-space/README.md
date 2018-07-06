@@ -24,13 +24,6 @@ Things you may want to cover:
 * ...
 
 ## messagesテーブル
-## ・誰が送ったか (user_id ; integer)
-## ・どのグループで送ったか(group_id; integer)
-## ・どのような内容か（画像・テキスト)
-## body、image は null: false,を外した。
-## foreign_key は 他のテーブルと関係している場合
-## foreign_keyがない場合は空白でもいいのか？
-## いつ送ったかは自動的にデータに付与されるのでテーブルは必要ない
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
@@ -42,9 +35,6 @@ Things you may want to cover:
 - belongs_to :group
 
 ## usersテーブル
-##    ・name (null: false)
-## Columnは自由につけられる
-## Email Password はdeviceにあるので必要ない
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -55,19 +45,16 @@ Things you may want to cover:
 
 
 ## groupsテーブル
-##  グループ名
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
+
 ### Association
 - has_many :users
 - has_many :messages
 
 
-
-
 ## membersテーブル
-## 中間テーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
