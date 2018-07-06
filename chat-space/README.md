@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## message テーブル
+## messagesテーブル
 ## ・誰が送ったか (user_id ; integer)
 ## ・どのグループで送ったか(group_id; integer)
 ## ・どのような内容か（画像・テキスト)
@@ -31,42 +31,49 @@ Things you may want to cover:
 ## foreign_key は 他のテーブルと関係している場合
 ## foreign_keyがない場合は空白でもいいのか？
 ## いつ送ったかは自動的にデータに付与されるのでテーブルは必要ない
-
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|body|text|  |
-|image|string|  |
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|body|text|
+|image|string|
+### Association
+- belongs_to :user
+- belongs_to :group
 
-
-## create account テーブル
-##    ・name (null: false, foreign_key: true)
+## usersテーブル
+##    ・name (null: false)
 ## Columnは自由につけられる
-## Type が不安
 ## Email Password はdeviceにあるので必要ない
-
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
+### Association
+- has_many :groups
+- has_many :messages
 
 
-## 新規チャットグループ テーブル
+
+## groupsテーブル
 ##  グループ名
 ##  チャットメンバー
-
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false, foreign_key: true|
+|name|text|null: false|
 |member|string|null: false, foreign_key: true|
+### Association
+- has_many :users
+- has_many :messages
+
+
 
 
 ## membersテーブル
-
+## 中間テーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
