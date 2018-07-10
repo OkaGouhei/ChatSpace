@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+.chat-side{
+  height: 100vh;
+  width: 300px;
+  float: left;
+}

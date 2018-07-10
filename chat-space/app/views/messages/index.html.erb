@@ -1,0 +1,101 @@
+<div class="notification">
+</div>
+<div class="notice">メッセージ送信成功</div>
+<div class="chat-side">
+  <div class="chat-side__user">
+    <div class="chat-side__user-content">
+      <div class="chat-side__user-name">
+      岡郷平
+      </div>
+    <a class="chat-side__user--new-group" href="/groups/new">
+      <i class="fa fa-pencil-square-o">
+      </i>
+    </a>
+    <a class="chat-side__user--edit-user" href="/users/edit">
+      <i class="fa fa-cog">
+      </i>
+    </a>
+    </div>
+  </div>
+  <div class="chat-side__groups">
+    <div class="chat-side__groups-list">
+      <a href="/groups/1110/messages">
+        <div class="chat-side__group">
+          <div class="chat-side__group-name">
+          東京
+          </div>
+          <div class="chat-side__group-message">
+          おはよう
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="chat-main">
+  <div class="chat-main__header">
+    <div class="chat-main__header--group clearfix">
+      <div class="chat-main__header--group-name">
+      東京
+      </div>
+      <a class="chat-main__header--group-edit-btn" href="/groups/1110/edit">edit
+      </a>
+    </div>
+    <div class="chat-main__header-members">
+      MEMBER:
+      <i>
+      岡郷平
+      </i>
+    </div>
+  </div>
+
+  <div class="chat-main__body">
+    <div class="chat-main__body--messages-list">
+      <div class="chat-main__message clearfix" data-id="1880">
+        <div class="chat-main__message-name">
+        岡郷平
+        </div>
+        <div class="chat-main__message-time">
+        2018/07/08 17:43:23
+        </div>
+        <div class="chat-main__message-body">
+        おはよう
+          <img class="chat-main__message-body-image" src="">
+        </div>
+      </div>
+
+      <div class="chat-main__message clearfix" data-id="1878">
+        <div class="chat-main__message-name">
+        岡郷平
+        </div>
+        <div class="chat-main__message-time">
+        2018/07/08 16:52:58
+        </div>
+        <div class="chat-main__message-body">
+        おはよう
+          <img class="chat-main__message-body-image" src="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="chat-main__footer">
+    <form class="chat-main__footer-form" id="new_message" enctype="multipart/form-data" action="/groups/1110/messages" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token" value="ZqeiCHklbHunaO72Mz+rwwJCW1QMAasXRFEgbOxBQ6jtQYVZd5wHWo40O3PgJB3xi3M8hBmCDv/z3tGjYOR1NQ==">
+        <div class="chat-main__footer-body">
+          <input placeholder="type a message" class="message" type="text" name="message[body]" id="message_body">
+          <label class="chat-file" for="message_image">
+            <input class="image" type="file" name="message[image]" id="message_image">
+            <i class="fa fa-image">
+            </i>
+          </label>
+        </div>
+      S<input type="submit" name="commit" value="Send" class="submit" data-disable-with="Send">
+    </form>
+  </div>
+</div>
+
+
+
