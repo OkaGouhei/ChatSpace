@@ -3,11 +3,12 @@
     height: 100vh;
     width: calc(100vw - 300px);
     float: left;
-    background-color: #AAAAAA;
+    // background-color: #AAAAAA;
     &__header {
         height: 120px;
         padding: 0px 40px;
         border-bottom : solid 1px;
+        background-color: #fff;
         border-color: $BorderColor;
         &--group{
             height: 35px;
@@ -33,6 +34,7 @@
     &__body {
         height: calc(100vh - 210px);
         padding: 0px 40px;
+        background-color: #fafafa;
         &--message{
             padding: 46px 0px 10px 0px;
         }
@@ -58,6 +60,7 @@
     &__footer {
         height: 50px;
         padding: 20px 40px 20px 40px;
+        background-color: #ddd;
         &--form{
             height:50px;
             width:calc(100vw - 500px);
