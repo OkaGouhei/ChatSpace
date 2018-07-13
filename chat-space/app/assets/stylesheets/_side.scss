@@ -1,5 +1,5 @@
 .notice {
-    color: $B-WhiteColor;
+    color: WhiteColor;
     background-color: #38AEF0;
     text-align: center;
 }
@@ -15,7 +15,6 @@
         padding: 0px 50px 0px 30px;
         border-bottom : solid 1px;
         border-color:$BorderColor;
-
         &--content {
             height: 50px;
             width: 250px;
@@ -25,7 +24,7 @@
             top: 0;
             bottom: 0;
             &-name {
-                color: $B-WhiteColor;
+                color: $WhiteColor;
                 font-size: 16px;
                 font-weight: bold;
                 display: inline-block;
@@ -33,7 +32,7 @@
             &-icon {
                 float:right;
                 font-size: 1.2em;
-                a {color: $B-WhiteColor;
+                a {color: $WhiteColor;
                   }
             }
         }
@@ -45,15 +44,15 @@
         position: relative;
         padding: 0px 20px;
         &--list {
-            color: $B-WhiteColor;
+            color: $WhiteColor;
             &-name {
                 font-size: 15px;
-                color: $B-WhiteColor;
+                color: $WhiteColor;
                 padding: 20px 0px 5px 0px;
             }
             &-message {
                 font-size: 11px;
-                color: $B-WhiteColor;
+                color: $WhiteColor;
                 padding: 0px 0px 40px 0px;
             }
         }

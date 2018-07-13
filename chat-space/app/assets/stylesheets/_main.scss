@@ -3,7 +3,6 @@
     height: 100vh;
     width: calc(100vw - 300px);
     float: left;
-    // background-color: #AAAAAA;
     &__header {
         height: 120px;
         padding: 0px 40px;
@@ -20,7 +19,7 @@
                 float: right;
                 border: solid 1px ;
                 text-align: center;
-                color: $A-GlayColor;
+                color: $GlayColor;
                 line-height: 40px;
             }
         }
@@ -39,7 +38,7 @@
             padding: 46px 0px 10px 0px;
         }
         &__name {
-            color: $A-GlayColor;
+            color: $GlayColor;
             font-size: 16px;
             font-weight: bold;
             float: left;
@@ -52,7 +51,7 @@
         }
         &__body {
             font-size: 14px;
-            color: $A-GlayColor;
+            color: $GlayColor;
             clear:both;
             padding: 5px 0px 0px 0px;
         }
@@ -65,7 +64,7 @@
             height:50px;
             width:calc(100vw - 500px);
             font-size: 16px;
-            color: $A-GlayColor;
+            color: $GlayColor;
             background-color: white;
             float: left;
             padding: 0px 10px 0px 10px;
@@ -77,18 +76,16 @@
             font-size: 1.0em;
             text-align: center;
             line-height: 50px;
-            a {color: $A-GlayColor;
+            a {color: $GlayColor;
                 }
             }
-
         }
-
         &--input{
             height: 50px;
             width: 80px;
             font-size: 16px;
             padding: 0px 0px 0px 0px;
-            background-color: $A-WhiteColor;
+            background-color: #38AEF0;
             float: right;
             &-send{
                 font-size: 17px;
