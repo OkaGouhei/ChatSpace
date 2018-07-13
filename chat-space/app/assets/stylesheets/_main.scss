@@ -60,31 +60,36 @@
         padding: 20px 40px 20px 40px;
         &--form{
             height:50px;
-            width:calc(100vw - 490px);
+            width:calc(100vw - 500px);
             font-size: 16px;
             color: $A-GlayColor;
-            padding: 0px 10px 0px 10px;
             background-color: white;
             float: left;
+            padding: 0px 10px 0px 10px;
             &-text{
-                &-icon{
-                float: right;
-                font-size: 2.0em;
-                    a {color: $A-GlayColor;
-                    }
+            width:calc(100vw - 520px);
+            }
+            &-icon{
+            float: right;
+            font-size: 1.0em;
+            text-align: center;
+            line-height: 50px;
+            a {color: $A-GlayColor;
                 }
             }
+
         }
 
         &--input{
             height: 50px;
-            width: 60px;
+            width: 80px;
             font-size: 16px;
             padding: 0px 0px 0px 0px;
             background-color: $A-WhiteColor;
             float: right;
             &-send{
-                font-size: 18px;
+                font-size: 17px;
+                color:white;
                 margin: auto;
                 text-align: center;
                 line-height: 50px;
