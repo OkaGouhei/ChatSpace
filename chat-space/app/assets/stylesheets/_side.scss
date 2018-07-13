@@ -25,7 +25,7 @@
             top: 0;
             bottom: 0;
             &-name {
-                color:$B-WhiteColor;
+                color: $B-WhiteColor;
                 font-size: 16px;
                 font-weight: bold;
                 display: inline-block;
@@ -33,7 +33,7 @@
             &-icon {
                 float:right;
                 font-size: 1.2em;
-                a {color:$B-WhiteColor;
+                a {color: $B-WhiteColor;
                   }
             }
         }
@@ -45,15 +45,15 @@
         position: relative;
         padding: 0px 20px;
         &--list {
-            color:$B-WhiteColor;
+            color: $B-WhiteColor;
             &-name {
                 font-size: 15px;
-                color:$B-WhiteColor;
+                color: $B-WhiteColor;
                 padding: 20px 0px 5px 0px;
             }
             &-message {
                 font-size: 11px;
-                color:$B-WhiteColor;
+                color: $B-WhiteColor;
                 padding: 0px 0px 40px 0px;
             }
         }

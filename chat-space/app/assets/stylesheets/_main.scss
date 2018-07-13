@@ -1,14 +1,14 @@
 
 .main {
     height: 100vh;
-    width:calc(100vw - 300px);
+    width: calc(100vw - 300px);
     float: left;
     background-color: #AAAAAA;
     &__header {
         height: 120px;
         padding: 0px 40px;
         border-bottom : solid 1px;
-        border-color:$BorderColor;
+        border-color: $BorderColor;
         &--group{
             height: 35px;
             padding: 35px 0px 5px 0px;
@@ -16,10 +16,10 @@
             &-exit{
                 height: 40px;
                 width: 80px;
-                float:right;
+                float: right;
                 border: solid 1px ;
                 text-align: center;
-                color:$A-GlayColor;
+                color: $A-GlayColor;
                 line-height: 40px;
             }
         }
@@ -50,7 +50,7 @@
         }
         &__body {
             font-size: 14px;
-            color:$A-GlayColor;
+            color: $A-GlayColor;
             clear:both;
             padding: 5px 0px 0px 0px;
         }
@@ -62,23 +62,23 @@
             height:50px;
             width:calc(100vw - 490px);
             font-size: 16px;
-            color:$A-GlayColor;
+            color: $A-GlayColor;
             padding: 0px 10px 0px 10px;
             background-color: white;
             float: left;
             &-text{
                 &-icon{
-                float:right;
+                float: right;
                 font-size: 2.0em;
-                    a {color:$A-GlayColor;
+                    a {color: $A-GlayColor;
                     }
                 }
             }
         }
 
         &--input{
-            height:50px;
-            width:60px;
+            height: 50px;
+            width: 60px;
             font-size: 16px;
             padding: 0px 0px 0px 0px;
             background-color: $A-WhiteColor;
