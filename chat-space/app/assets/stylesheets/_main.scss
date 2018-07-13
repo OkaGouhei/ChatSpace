@@ -1,0 +1,94 @@
+
+.main {
+    height: 100vh;
+    width:calc(100vw - 300px);
+    float: left;
+    background-color: #AAAAAA;
+    &__header {
+        height: 120px;
+        padding: 0px 40px;
+        border-bottom : solid 1px;
+        border-color:$BorderColor;
+        &--group{
+            height: 35px;
+            padding: 35px 0px 5px 0px;
+            font-size: 20px;
+            &-exit{
+                height: 40px;
+                width: 80px;
+                float:right;
+                border: solid 1px ;
+                text-align: center;
+                color:$A-GlayColor;
+                line-height: 40px;
+            }
+        }
+        &--members{
+            height: 25px;
+            width: 300px;
+            padding: 10px 0px 10px 0px;
+            font-size: 12px;
+        }
+    }
+    &__body {
+        height: calc(100vh - 210px);
+        padding: 0px 40px;
+        &--message{
+            padding: 46px 0px 10px 0px;
+        }
+        &__name {
+            color: $A-GlayColor;
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+        }
+        &__time {
+            color: #434A54;
+            font-size: 10px;
+            float: left;
+            padding: 5px 0px 0px 30px;
+        }
+        &__body {
+            font-size: 14px;
+            color:$A-GlayColor;
+            clear:both;
+            padding: 5px 0px 0px 0px;
+        }
+    }
+    &__footer {
+        height: 50px;
+        padding: 20px 40px 20px 40px;
+        &--form{
+            height:50px;
+            width:calc(100vw - 490px);
+            font-size: 16px;
+            color:$A-GlayColor;
+            padding: 0px 10px 0px 10px;
+            background-color: white;
+            float: left;
+            &-text{
+                &-icon{
+                float:right;
+                font-size: 2.0em;
+                    a {color:$A-GlayColor;
+                    }
+                }
+            }
+        }
+
+        &--input{
+            height:50px;
+            width:60px;
+            font-size: 16px;
+            padding: 0px 0px 0px 0px;
+            background-color: $A-WhiteColor;
+            float: right;
+            &-send{
+                font-size: 18px;
+                margin: auto;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+    }
+}
