@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root  'messages#index'                       #ルートパスの指定
   resources :users, only: [:edit, :update]
+  resources :groups, only: [:new, :create, :edit, :update] do
 end
