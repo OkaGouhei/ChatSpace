@@ -15,6 +15,7 @@
         padding: 0px 50px 0px 30px;
         border-bottom : solid 1px;
         border-color:$BorderColor;
+
         &--content {
             height: 50px;
             width: 250px;
@@ -23,6 +24,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
+
             &-name {
                 color: $WhiteColor;
                 font-size: 16px;
@@ -43,16 +45,18 @@
         background-color: #2f3e51;
         position: relative;
         padding: 0px 20px;
+        a {color: $WhiteColor;
+          text-decoration: none;
+        }
         &--list {
-            color: $WhiteColor;
+
             &-name {
                 font-size: 15px;
-                color: $WhiteColor;
                 padding: 20px 0px 5px 0px;
+
             }
             &-message {
                 font-size: 11px;
-                color: $WhiteColor;
                 padding: 0px 0px 40px 0px;
             }
         }
