@@ -17,6 +17,8 @@ class GroupsController < ApplicationController
   end
 
   def update
+    @group = Group.find(params[:id])
+     # @group を updateメソッド 内で定義する必要がある
     if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
