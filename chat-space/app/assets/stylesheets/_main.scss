@@ -56,65 +56,8 @@
         }
     }
     &__footer {
-        height: 70px;
-        // padding: 10px 40px 10px 40px;
+        height: 50px;
         background-color: #ddd;
-        &--form__message{
-            // display:none;
-            height:40px;
-            width:calc(100vw - 600px);
-            // font-size: 16px;
-            // color: $GlayColor;
-            // background-color: white;
-            float: left;
-            padding: 0px 10px 0px 10px;
-            // &__message{
-                // width:calc(100vw - 520px);
-                // }
-         }
+        padding: 20px 20px 20px 20px;
     }
-
-
-
-
-    // &__footer {
-    //     height: 50px;
-    //     padding: 20px 40px 20px 40px;
-    //     background-color: #ddd;
-    //     // &--form{
-    //     //     height:50px;
-    //     //     width:calc(100vw - 500px);
-    //     //     font-size: 16px;
-    //     //     color: $GlayColor;
-    //     //     background-color: white;
-    //     //     float: left;
-    //     //     padding: 0px 10px 0px 10px;
-    //     //     &-text{
-    //     //     width:calc(100vw - 520px);
-    //     //     }
-    //         // &-icon{
-    //         // float: right;
-    //         // font-size: 1.0em;
-    //         // text-align: center;
-    //         // line-height: 50px;
-    //         // a {color: $GlayColor;
-    //         //     }
-    //         // }
-    //     }
-    //     &--input{
-    //         height: 50px;
-    //         width: 80px;
-    //         font-size: 16px;
-    //         padding: 0px 0px 0px 0px;
-    //         background-color: #38AEF0;
-    //         float: right;
-    //         // &-send{
-    //         //     font-size: 17px;
-    //         //     color:white;
-    //         //     margin: auto;
-    //         //     text-align: center;
-    //         //     line-height: 50px;
-    //         // }
-    //     // }
-    // }
 }
