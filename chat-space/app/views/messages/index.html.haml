@@ -33,22 +33,13 @@
       = render @messages
 
   .main__footer
-    .main__footer--form__message
+    .main__footer--form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'main__footer--form__message', placeholder: 'type a message'
-      .main__footer--form__icon
-        = f.label :image, class: 'main__footer--form__icon' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'input__send'
-
-
-    / .main__footer--form
-    /   .main__footer--form-text
-    /   .main__footer--form-icon
-    /     = link_to "/" do
-    /       = fa_icon 'photo', class: 'icon'
-    / .main__footer--input
-    /   .main__footer--input-send
-    /     Send
+      .main__footer--form--text
+      = f.text_field :content, placeholder: 'type a message'
+      .main__footer--form--icon
+      = f.label :image, class: 'main__footer--icon' do
+        = fa_icon 'picture-o'
+        = f.file_field :image
+      = f.submit 'Send'
 
