@@ -1,11 +1,10 @@
-.message
-  .upper-message
-    .upper-message__user-name
-      = message.user.name
-    .upper-message__date
-      = message.created_at
-  .lower-meesage
+.main__body__messages__message
+  .main__body__messages__message__username
+    = message.user.name
+  .main__body__messages__message__date
+    = message.created_at
+  .main__body__messages__message__content
     - if message.content.present?
-      %p.lower-message__content
+      %p.lower__message__content
         = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+    = image_tag message.image.url, class: 'lower__message__image' if message.image.present?

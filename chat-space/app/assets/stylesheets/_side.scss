@@ -48,14 +48,15 @@
         a {color: $WhiteColor;
           text-decoration: none;
         }
-        &--list {
+        &__group{
+            padding: 5px 0px;
 
-            &-name {
+            &__name {
                 font-size: 15px;
                 padding: 20px 0px 5px 0px;
 
             }
-            &-message {
+            &__message {
                 font-size: 11px;
                 padding: 0px 0px 40px 0px;
             }

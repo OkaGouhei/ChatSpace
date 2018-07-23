@@ -33,88 +33,46 @@
         height: calc(100vh - 210px);
         padding: 0px 40px;
         background-color: #fafafa;
-        &--message{
-            padding: 46px 0px 10px 0px;
-        }
-        &__name {
-            color: $GlayColor;
-            font-size: 16px;
-            font-weight: bold;
-            float: left;
-        }
-        &__time {
-            color: #434A54;
-            font-size: 10px;
-            float: left;
-            padding: 5px 0px 0px 30px;
-        }
-        &__body {
-            font-size: 14px;
-            color: $GlayColor;
-            clear:both;
-            padding: 5px 0px 0px 0px;
+        &__messages{
+            &__message{
+            padding: 20px 0px;
+                &__username{
+                     width: 200px;
+                }
+                &__date{
+                    font-size:10px;
+                    width: 200px;
+                }
+            }
         }
     }
     &__footer {
-        height: 70px;
-        // padding: 10px 40px 10px 40px;
+        height: 60px;
+        padding: 20px 50px 10px 50px;
         background-color: #ddd;
-        &--form__message{
-            // display:none;
-            height:40px;
-            width:calc(100vw - 600px);
-            // font-size: 16px;
-            // color: $GlayColor;
-            // background-color: white;
-            float: left;
-            padding: 0px 10px 0px 10px;
-            // &__message{
-                // width:calc(100vw - 520px);
-                // }
-         }
+        &__form {
+            &__textfield{
+                height: 50px;
+            width: calc(100vw - 500px);
+            }
+            &__label{
+                &__icon{
+                    position: relative;
+                    right: 50px;
+                    margin: 0 auto;
+                }
+                &__hidden{
+                    display:none;
+                }
+            }
+            &__input{
+                 float: right;
+                 width: 60px;
+                 height: 50px;
+                 background-color: #38AEF0;
+                 color: white;
+                 border: none;
+            }
+        }
     }
-
-
-
-
-    // &__footer {
-    //     height: 50px;
-    //     padding: 20px 40px 20px 40px;
-    //     background-color: #ddd;
-    //     // &--form{
-    //     //     height:50px;
-    //     //     width:calc(100vw - 500px);
-    //     //     font-size: 16px;
-    //     //     color: $GlayColor;
-    //     //     background-color: white;
-    //     //     float: left;
-    //     //     padding: 0px 10px 0px 10px;
-    //     //     &-text{
-    //     //     width:calc(100vw - 520px);
-    //     //     }
-    //         // &-icon{
-    //         // float: right;
-    //         // font-size: 1.0em;
-    //         // text-align: center;
-    //         // line-height: 50px;
-    //         // a {color: $GlayColor;
-    //         //     }
-    //         // }
-    //     }
-    //     &--input{
-    //         height: 50px;
-    //         width: 80px;
-    //         font-size: 16px;
-    //         padding: 0px 0px 0px 0px;
-    //         background-color: #38AEF0;
-    //         float: right;
-    //         // &-send{
-    //         //     font-size: 17px;
-    //         //     color:white;
-    //         //     margin: auto;
-    //         //     text-align: center;
-    //         //     line-height: 50px;
-    //         // }
-    //     // }
-    // }
 }
