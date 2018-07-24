@@ -17,7 +17,7 @@
 
   .main__footer
     .main__footer__form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: {id: 'new_message'} do |f|
         = f.text_field :content, class: 'main__footer__form__textfield', placeholder: 'type a message'
         = f.label :image, class: 'main__footer__form__label' do
           = fa_icon 'picture-o', class: 'main__footer__form__label__icon'
