@@ -5,14 +5,14 @@ $(function(){
                   ${ message.user_name }
                 </div>
                 <div class="main__body__messages__message__date">
-                  ${ message.created_at}
+                  ${ message.created_at }
                 </div>
                 <div class="main__body__messages__message__content">
                   <p class="lower__message__content">
                   ${ message.content }
                   </p>
                   <p class="lower__message__image">
-                  ${ message.image }
+                  ${ message.image? `<img src = '${ message.image }'>` :""}
                   </p>
                 </div>
               </div>`
@@ -33,8 +33,7 @@ $(function(){
       .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.main__footer__form__input').prop('disabled', false);
-      scroll()
+      $('.main__footer__form__input').prop('disabled', false)
       $('#new_message')[0].reset();
     })
       .fail(function(){
