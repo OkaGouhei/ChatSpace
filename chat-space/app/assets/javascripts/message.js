@@ -33,14 +33,15 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-  })
+    })
       .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.main__footer__form__input').prop('disabled', false)
       $('#new_message')[0].reset();
       $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight}, 'fast');
-          })
-      .fail(function(){alert('error');})
-})
+      })
+    .fail(function(){alert('error');
+    })
+  })
 })
