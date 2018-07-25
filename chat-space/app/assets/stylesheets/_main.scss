@@ -33,20 +33,37 @@
         height: calc(100vh - 210px);
         padding: 0px 40px;
         background-color: #fafafa;
+        overflow: scroll;
         &__messages{
             &__message{
-            padding: 20px 0px;
+                padding: 20px 0px;
                 &__username{
-                     width: 200px;
+                    margin-top:0;
+                    width: 200px;
+                    float: left;
+                    font-size: 1.2em;
+                    color: #434A54;
+                    font-size: 16px;
+                    font-weight: bold;
                 }
                 &__date{
                     font-size:10px;
                     width: 200px;
+                    float: left;
+                    float: left;
+                    position: relative;
+                    bottom: 0;
+                    font-size: 0.8em;
+                    color: #999;
                 }
                 &__content{
                     font-size:20px;
                     width: 200px;
-                }
+                    img{
+                      height: 200px;
+                      width: 267px;
+                    }
+               }
             }
         }
     }
