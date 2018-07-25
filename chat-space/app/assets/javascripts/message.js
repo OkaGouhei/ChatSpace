@@ -18,10 +18,6 @@ $(function(){
               </div>`
   return html;
   }
-    // function scroll(){
-    // $('.body__messages').animate({scrollTop: $('.body__messages')[0].scrollHeight},'fast')
-    // }
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
