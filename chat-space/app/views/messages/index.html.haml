@@ -8,7 +8,7 @@
           edit
     .main__header--members
       member:
-      - @groupmembers.each do |person|
+      - @group.users.each do |person|
         = person.name
       / - は表示しない =は表示する
   .main__body
