@@ -11,13 +11,17 @@ $(function(){
                   <p class="lower__message__content">
                   ${ message.content }
                   </p>
-                  <p class="lower__message__image">
+                  <div class="lower__message__image">
                   ${ message.image? `<img src = '${ message.image }'>` :""}
-                  </p>
+                  </div>
                 </div>
               </div>`
   return html;
   }
+    // function scroll(){
+    // $('.body__messages').animate({scrollTop: $('.body__messages')[0].scrollHeight},'fast')
+    // }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -35,9 +39,8 @@ $(function(){
       $('.messages').append(html)
       $('.main__footer__form__input').prop('disabled', false)
       $('#new_message')[0].reset();
-    })
-      .fail(function(){
-      alert('error');
-    })
+      $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight}, 'fast');
+          })
+      .fail(function(){alert('error');})
 })
 })
