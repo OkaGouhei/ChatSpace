@@ -1,5 +1,5 @@
 $(function(){
-  var search_list = $(".chat-group-form__field--right");
+  var search_list = $("#user-search-result");
     function  appendUser(user) {
     var html = `
 <div class="chat-group-user clearfix">
