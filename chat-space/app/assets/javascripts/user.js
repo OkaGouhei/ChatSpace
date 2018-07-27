@@ -1,15 +1,16 @@
 $(function(){
   var search_list = $("#user-search-result");
+
     function  appendUser(user) {
-    var html = `
-<div class="chat-group-user clearfix">
-  <p class="chat-group-user__name"> ${ user.name }
-  </p>
-  <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ user.id }" data-user-name="${ user.name }">追加
-  </a>
-</div>`
+    var html = `<div class="chat-group-user clearfix">
+                  <p class="chat-group-user__name"> ${ user.name }
+                  </p>
+                  <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${ user.id }" data-user-name="${ user.name }">追加
+                  </a>
+                </div>`
     search_list.append(html);
   }
+
   $('#user-search-field').on('keyup', function(){
     var input = $(this).val();
     if (input!=""){
@@ -19,11 +20,11 @@ $(function(){
         data: { keyword: input },
         dataType: 'json'
       })
+
       .done(function(users) {
         $(".chat-group-form__input").empty();
           if (users.length != 0) {
             users.forEach(function(user){
-              console.log(user);
               appendUser(user);
             });
           }
@@ -31,11 +32,13 @@ $(function(){
             appendNoUser("一致するユーザーはいません。");
           }
         })
+
       .fail(function() {
          alert('ユーザーの検索に失敗しました。');
       });
     }
   });
+
  function appendMember(member){
      var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                  <input name='group[user_ids][]' type='hidden' value='${member.id}'>
@@ -45,6 +48,7 @@ $(function(){
          $("#chat-group-users").append(html);
          user_result.prepend(html);
    }
+
  $(document).on("click", ".chat-group-user__btn--add", function(){
        var member = new Object();
        member.name = $(this).prev().text()
@@ -52,6 +56,7 @@ $(function(){
        $(this).parent().remove()
        appendMember(member)
       });
+
  $("#chat-group-users").on("click", ".js-remove-btn", function(e){
        $(this).parent().remove();
    });
