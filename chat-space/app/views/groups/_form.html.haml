@@ -27,10 +27,11 @@
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
       #chat-group-users
-        #chat-group-user-currentuser.chat-group-user.clearfix
-          %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{current_user.id}"}
-          %p.chat-group-user__name
-            = current_user.name
+      /   #chat-group-user-currentuser.chat-group-user.clearfix
+      /     = hidden_field :group, :user_ids, value:"#{current_user.id}"
+      /     / %input{:name => "group[user_ids][]", :type => "hidden", :value => "#{current_user.id}"}
+      /     %p.chat-group-user__name
+      /       = current_user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
