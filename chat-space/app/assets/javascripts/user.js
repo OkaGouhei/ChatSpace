@@ -40,17 +40,19 @@ $(function(){
      var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                  <input name='group[user_ids][]' type='hidden' value='${member.id}'>
                  <p class='chat-group-user__name'>${member.name}</p>
-                <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
-                </div>`
-         user_result.prepend(html)
+                 <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                 </div>`
+         $("#chat-group-users").append(html);
+         user_result.prepend(html);
    }
-// 追加を押されたときにイベントが発火するようにする
  $(document).on("click", ".chat-group-user__btn--add", function(){
-       console.log(this)
        var member = new Object();
        member.name = $(this).prev().text()
        member.id = $(this).attr("data-user-id")
        $(this).parent().remove()
        appendMember(member)
       });
+ $("#chat-group-users").on("click", ".js-remove-btn", function(e){
+       $(this).parent().remove();
+   });
 });
