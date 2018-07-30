@@ -46,7 +46,7 @@ $(function(){
   })
 
   var interval = setInterval(function(){
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    if (window.location.pathname.match(/\/groups\/\d+\/messages/)) {
     var messageId = $('.main__body__messages__message').last().data('id'); //一番最後にある'main__body__messages__message'というクラスの'id'というデータ属性を取得し、'messageId'という変数に代入
       $.ajax({
          url: location.href,
