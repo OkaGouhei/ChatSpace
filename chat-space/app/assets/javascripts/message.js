@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-  var html = `<div class="main__body__messages__message">
+  var html = `<div class="main__body__messages__message" data-id="${message.id}">
                 <div class="main__body__messages__message__username">
                   ${ message.user_name }
                 </div>
@@ -30,7 +30,7 @@ $(function(){
       processData: false,
       contentType: false
     })
-      .done(function(data){
+    .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.main__footer__form__input').prop('disabled', false)
@@ -40,4 +40,3 @@ $(function(){
     .fail(function(){alert('error');
     })
   })
-})
