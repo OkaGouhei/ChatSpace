@@ -40,3 +40,27 @@ $(function(){
     .fail(function(){alert('error');
     })
   })
+
+  var interval = setInterval(function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    var messageId = $('.main__body__messages__message').last().data('id'); //一番最後にある'main__body__messages__message'というクラスの'id'というデータ属性を取得し、'messageId'という変数に代入
+      $.ajax({
+         url: location.href,
+         type: 'GET',
+         data: { id: messageId },
+         dataType: 'json'
+      })
+      .done(function(json) {
+        var html;
+        json.messages.forEach(function(message){
+          if (message.id > messageId ) {
+            html = buildHTML(message);
+            $('.messages').append(html);
+            $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight}, 'fast');
+          }
+        });
+      });
+    } else {
+    clearInterval(interval);
+  }}, 3 * 1000 );
+});
