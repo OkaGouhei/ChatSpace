@@ -55,10 +55,9 @@ $(function(){
          data: { id: messageId },
          dataType: 'json'
       })
-      .done(function(json) {
-        console.log(json)
+      .done(function(message) {
         var html;
-        json.messages.forEach(function(message){
+        message.messages.forEach(function(message){
             html = buildHTML(message);
             $('.messages').append(html);
             scroll();
