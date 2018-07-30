@@ -18,6 +18,10 @@ $(function(){
               </div>`
   return html;
   }
+
+  function scroll(){
+    $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight}, 'fast');
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -56,7 +60,7 @@ $(function(){
           if (message.id > messageId ) {
             html = buildHTML(message);
             $('.messages').append(html);
-            $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight}, 'fast');
+            scroll();
           }
         });
       });
