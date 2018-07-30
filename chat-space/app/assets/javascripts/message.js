@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   function buildHTML(message){
   var html = `<div class="main__body__messages__message" data-id="${message.id}">
@@ -55,16 +56,16 @@ $(function(){
          dataType: 'json'
       })
       .done(function(json) {
+        console.log(json)
         var html;
         json.messages.forEach(function(message){
-          if (message.id > messageId ) {
             html = buildHTML(message);
             $('.messages').append(html);
             scroll();
-          }
         });
       });
     } else {
     clearInterval(interval);
   }}, 3 * 1000 );
 });
+})
