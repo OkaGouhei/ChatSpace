@@ -39,7 +39,7 @@
 # set :ssh_options, verify_host_key: :secure
 lock "~> 3.11.0"
 
-set :application, 'chat-space'
+set :application, 'ChatSpace/chat-space'
 set :repo_url,  'git@github.com:OkaGouhei/ChatSpace.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
