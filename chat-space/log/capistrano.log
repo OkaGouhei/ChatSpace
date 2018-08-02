@@ -4793,3 +4793,151 @@ Tasks: TOP => assets:precompile
   INFO [3282488e] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/ChatSpace/shared/bundle --without development test --deployment --quiet as ec2-user@18.179.183.81
  DEBUG [3282488e] Command: cd /var/www/ChatSpace/releases/20180802062200 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/ChatSpace/shared/bundle --without development test --deployment --quiet )
  DEBUG [0356d0cc] 	Could not locate Gemfile
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-02 16:22:37 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ec69f1e5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@18.179.183.81
+ DEBUG [ec69f1e5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [1fb936f6] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [f6d97800] Running /usr/bin/env mkdir -p /tmp as ec2-user@18.179.183.81
+ DEBUG [f6d97800] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b0678090] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ChatSpace-production-okagouhei.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ChatSpace-production-okagouhei.sh 100.0%
+  INFO [78cf0020] Running /usr/bin/env chmod 700 /tmp/git-ssh-ChatSpace-production-okagouhei.sh as ec2-user@18.179.183.81
+ DEBUG [78cf0020] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-ChatSpace-production-okagouhei.sh )
+  INFO [0ade4858] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [95669937] Running /usr/bin/env git ls-remote git@github.com:OkaGouhei/ChatSpace.git HEAD as ec2-user@18.179.183.81
+ DEBUG [95669937] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env git ls-remote git@github.com:OkaGouhei/ChatSpace.git HEAD )
+ DEBUG [f821fa6a] 	62a2258db83ba4f2e929031f05ec539cad9132a0	HEAD
+  INFO [f821fa6a] Finished in 1.650 seconds with exit status 0 (successful).
+  INFO [2c4c23cd] Running /usr/bin/env mkdir -p /var/www/ChatSpace/shared /var/www/ChatSpace/releases as ec2-user@18.179.183.81
+ DEBUG [2c4c23cd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/ChatSpace/shared /var/www/ChatSpace/releases )
+  INFO [68fea777] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [5ece48a9] Running /usr/bin/env mkdir -p /var/www/ChatSpace/shared/log /var/www/ChatSpace/shared/tmp/pids /var/www/ChatSpace/shared/tmp/cache /var/www/ChatSpace/shared/tmp/sockets /var/www/ChatSpace/shared/vendor/bundle /var/www/ChatSpace/shared/public/system /var/www/ChatSpace/shared/public/uploads /var/www/ChatSpace/shared/public/assets as ec2-user@18.179.183.81
+ DEBUG [5ece48a9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/ChatSpace/shared/log /var/www/ChatSpace/shared/tmp/pids /var/www/ChatSpace/shared/tmp/cache /var/www/ChatSpace/shared/tmp/sockets /var/www/ChatSpace/shared/vendor/bundle /var/www/ChatSpace/shared/public/system /var/www/ChatSpace/shared/public/uploads /var/www/ChatSpace/shared/public/assets )
+  INFO [118e95a4] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [bc97bc8c] Running [ -f /var/www/ChatSpace/current/REVISION ] as ec2-user@18.179.183.81
+ DEBUG [bc97bc8c] Command: [ -f /var/www/ChatSpace/current/REVISION ]
+ DEBUG [786cf41c] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [f847c947] Running [ -f /var/www/ChatSpace/repo/HEAD ] as ec2-user@18.179.183.81
+ DEBUG [f847c947] Command: [ -f /var/www/ChatSpace/repo/HEAD ]
+ DEBUG [3333e9e0] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/ChatSpace/repo
+ DEBUG [306db36a] Running if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi as ec2-user@18.179.183.81
+ DEBUG [306db36a] Command: if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi
+ DEBUG [5e089997] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [d9f4d0b2] Running /usr/bin/env git remote set-url origin git@github.com:OkaGouhei/ChatSpace.git as ec2-user@18.179.183.81
+ DEBUG [d9f4d0b2] Command: cd /var/www/ChatSpace/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env git remote set-url origin git@github.com:OkaGouhei/ChatSpace.git )
+  INFO [440f48f5] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [43ac862a] Running /usr/bin/env git remote update --prune as ec2-user@18.179.183.81
+ DEBUG [43ac862a] Command: cd /var/www/ChatSpace/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [655ba568] 	Fetching origin
+  INFO [655ba568] Finished in 1.665 seconds with exit status 0 (successful).
+ DEBUG [add866cb] Running if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi as ec2-user@18.179.183.81
+ DEBUG [add866cb] Command: if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi
+ DEBUG [cd0c4198] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [3d27675e] Running /usr/bin/env mkdir -p /var/www/ChatSpace/releases/20180802072240 as ec2-user@18.179.183.81
+ DEBUG [3d27675e] Command: cd /var/www/ChatSpace/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env mkdir -p /var/www/ChatSpace/releases/20180802072240 )
+  INFO [fcbed0fb] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [84df88ef] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/ChatSpace/releases/20180802072240 as ec2-user@18.179.183.81
+ DEBUG [84df88ef] Command: cd /var/www/ChatSpace/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/ChatSpace/releases/20180802072240 )
+  INFO [b2b86b40] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [9ad81c67] Running if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi as ec2-user@18.179.183.81
+ DEBUG [9ad81c67] Command: if test ! -d /var/www/ChatSpace/repo; then echo "Directory does not exist '/var/www/ChatSpace/repo'" 1>&2; false; fi
+ DEBUG [17c7c600] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [279f1643] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@18.179.183.81
+ DEBUG [279f1643] Command: cd /var/www/ChatSpace/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ChatSpace-production-okagouhei.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [46b277c9] 	62a2258db83ba4f2e929031f05ec539cad9132a0
+ DEBUG [46b277c9] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [5df1b624] Running if test ! -d /var/www/ChatSpace/releases/20180802072240; then echo "Directory does not exist '/var/www/ChatSpace/releases/20180802072240'" 1>&2; false; fi as ec2-user@18.179.183.81
+ DEBUG [5df1b624] Command: if test ! -d /var/www/ChatSpace/releases/20180802072240; then echo "Directory does not exist '/var/www/ChatSpace/releases/20180802072240'" 1>&2; false; fi
+ DEBUG [be8d641b] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [2a9003e8] Running /usr/bin/env echo "62a2258db83ba4f2e929031f05ec539cad9132a0" > REVISION as ec2-user@18.179.183.81
+ DEBUG [2a9003e8] Command: cd /var/www/ChatSpace/releases/20180802072240 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "62a2258db83ba4f2e929031f05ec539cad9132a0" > REVISION )
+  INFO [09883790] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [c229ea83] Running /usr/bin/env mkdir -p /var/www/ChatSpace/releases/20180802072240 /var/www/ChatSpace/releases/20180802072240/tmp /var/www/ChatSpace/releases/20180802072240/vendor /var/www/ChatSpace/releases/20180802072240/public as ec2-user@18.179.183.81
+ DEBUG [c229ea83] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/ChatSpace/releases/20180802072240 /var/www/ChatSpace/releases/20180802072240/tmp /var/www/ChatSpace/releases/20180802072240/vendor /var/www/ChatSpace/releases/20180802072240/public )
+  INFO [5f39de3a] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [4a920160] Running [ -L /var/www/ChatSpace/releases/20180802072240/log ] as ec2-user@18.179.183.81
+ DEBUG [4a920160] Command: [ -L /var/www/ChatSpace/releases/20180802072240/log ]
+ DEBUG [4acca2fa] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [8f8ab468] Running [ -d /var/www/ChatSpace/releases/20180802072240/log ] as ec2-user@18.179.183.81
+ DEBUG [8f8ab468] Command: [ -d /var/www/ChatSpace/releases/20180802072240/log ]
+ DEBUG [f2bc3837] Finished in 0.079 seconds with exit status 1 (failed).
+  INFO [ef201ce5] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/log /var/www/ChatSpace/releases/20180802072240/log as ec2-user@18.179.183.81
+ DEBUG [ef201ce5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/log /var/www/ChatSpace/releases/20180802072240/log )
+  INFO [9757bc90] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [c3c69e2c] Running [ -L /var/www/ChatSpace/releases/20180802072240/tmp/pids ] as ec2-user@18.179.183.81
+ DEBUG [c3c69e2c] Command: [ -L /var/www/ChatSpace/releases/20180802072240/tmp/pids ]
+ DEBUG [afe9e808] Finished in 0.083 seconds with exit status 1 (failed).
+ DEBUG [088e9f86] Running [ -d /var/www/ChatSpace/releases/20180802072240/tmp/pids ] as ec2-user@18.179.183.81
+ DEBUG [088e9f86] Command: [ -d /var/www/ChatSpace/releases/20180802072240/tmp/pids ]
+ DEBUG [a18bb9de] Finished in 0.088 seconds with exit status 1 (failed).
+  INFO [50ae37fe] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/pids /var/www/ChatSpace/releases/20180802072240/tmp/pids as ec2-user@18.179.183.81
+ DEBUG [50ae37fe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/pids /var/www/ChatSpace/releases/20180802072240/tmp/pids )
+  INFO [e370d3f1] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [717adfdb] Running [ -L /var/www/ChatSpace/releases/20180802072240/tmp/cache ] as ec2-user@18.179.183.81
+ DEBUG [717adfdb] Command: [ -L /var/www/ChatSpace/releases/20180802072240/tmp/cache ]
+ DEBUG [617250f4] Finished in 0.079 seconds with exit status 1 (failed).
+ DEBUG [2bcd826f] Running [ -d /var/www/ChatSpace/releases/20180802072240/tmp/cache ] as ec2-user@18.179.183.81
+ DEBUG [2bcd826f] Command: [ -d /var/www/ChatSpace/releases/20180802072240/tmp/cache ]
+ DEBUG [9c2f7934] Finished in 0.078 seconds with exit status 1 (failed).
+  INFO [9ebc9953] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/cache /var/www/ChatSpace/releases/20180802072240/tmp/cache as ec2-user@18.179.183.81
+ DEBUG [9ebc9953] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/cache /var/www/ChatSpace/releases/20180802072240/tmp/cache )
+  INFO [781dba50] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [88fa5223] Running [ -L /var/www/ChatSpace/releases/20180802072240/tmp/sockets ] as ec2-user@18.179.183.81
+ DEBUG [88fa5223] Command: [ -L /var/www/ChatSpace/releases/20180802072240/tmp/sockets ]
+ DEBUG [d2a85b87] Finished in 0.085 seconds with exit status 1 (failed).
+ DEBUG [b6645c74] Running [ -d /var/www/ChatSpace/releases/20180802072240/tmp/sockets ] as ec2-user@18.179.183.81
+ DEBUG [b6645c74] Command: [ -d /var/www/ChatSpace/releases/20180802072240/tmp/sockets ]
+ DEBUG [04c33765] Finished in 0.086 seconds with exit status 1 (failed).
+  INFO [656e4df2] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/sockets /var/www/ChatSpace/releases/20180802072240/tmp/sockets as ec2-user@18.179.183.81
+ DEBUG [656e4df2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/tmp/sockets /var/www/ChatSpace/releases/20180802072240/tmp/sockets )
+  INFO [3192e4ed] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [8ef1d852] Running [ -L /var/www/ChatSpace/releases/20180802072240/vendor/bundle ] as ec2-user@18.179.183.81
+ DEBUG [8ef1d852] Command: [ -L /var/www/ChatSpace/releases/20180802072240/vendor/bundle ]
+ DEBUG [12dcf9e0] Finished in 0.085 seconds with exit status 1 (failed).
+ DEBUG [85530b97] Running [ -d /var/www/ChatSpace/releases/20180802072240/vendor/bundle ] as ec2-user@18.179.183.81
+ DEBUG [85530b97] Command: [ -d /var/www/ChatSpace/releases/20180802072240/vendor/bundle ]
+ DEBUG [a9ec238a] Finished in 0.082 seconds with exit status 1 (failed).
+  INFO [bafa3515] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/vendor/bundle /var/www/ChatSpace/releases/20180802072240/vendor/bundle as ec2-user@18.179.183.81
+ DEBUG [bafa3515] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/vendor/bundle /var/www/ChatSpace/releases/20180802072240/vendor/bundle )
+  INFO [684dd0b0] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [f089ed9b] Running [ -L /var/www/ChatSpace/releases/20180802072240/public/system ] as ec2-user@18.179.183.81
+ DEBUG [f089ed9b] Command: [ -L /var/www/ChatSpace/releases/20180802072240/public/system ]
+ DEBUG [634c829b] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [fccc48be] Running [ -d /var/www/ChatSpace/releases/20180802072240/public/system ] as ec2-user@18.179.183.81
+ DEBUG [fccc48be] Command: [ -d /var/www/ChatSpace/releases/20180802072240/public/system ]
+ DEBUG [b1087b94] Finished in 0.086 seconds with exit status 1 (failed).
+  INFO [806a773e] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/public/system /var/www/ChatSpace/releases/20180802072240/public/system as ec2-user@18.179.183.81
+ DEBUG [806a773e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/public/system /var/www/ChatSpace/releases/20180802072240/public/system )
+  INFO [ab719c3e] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [a902020b] Running [ -L /var/www/ChatSpace/releases/20180802072240/public/uploads ] as ec2-user@18.179.183.81
+ DEBUG [a902020b] Command: [ -L /var/www/ChatSpace/releases/20180802072240/public/uploads ]
+ DEBUG [75020d44] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [b91a7f5e] Running [ -d /var/www/ChatSpace/releases/20180802072240/public/uploads ] as ec2-user@18.179.183.81
+ DEBUG [b91a7f5e] Command: [ -d /var/www/ChatSpace/releases/20180802072240/public/uploads ]
+ DEBUG [e318a153] Finished in 0.085 seconds with exit status 1 (failed).
+  INFO [ac4d2623] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/public/uploads /var/www/ChatSpace/releases/20180802072240/public/uploads as ec2-user@18.179.183.81
+ DEBUG [ac4d2623] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/public/uploads /var/www/ChatSpace/releases/20180802072240/public/uploads )
+  INFO [b98d8068] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [9e763780] Running [ -L /var/www/ChatSpace/releases/20180802072240/public/assets ] as ec2-user@18.179.183.81
+ DEBUG [9e763780] Command: [ -L /var/www/ChatSpace/releases/20180802072240/public/assets ]
+ DEBUG [afab2d0f] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [30a1f58e] Running [ -d /var/www/ChatSpace/releases/20180802072240/public/assets ] as ec2-user@18.179.183.81
+ DEBUG [30a1f58e] Command: [ -d /var/www/ChatSpace/releases/20180802072240/public/assets ]
+ DEBUG [f7ef512c] Finished in 0.089 seconds with exit status 1 (failed).
+  INFO [2a7dfad5] Running /usr/bin/env ln -s /var/www/ChatSpace/shared/public/assets /var/www/ChatSpace/releases/20180802072240/public/assets as ec2-user@18.179.183.81
+ DEBUG [2a7dfad5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/ChatSpace/shared/public/assets /var/www/ChatSpace/releases/20180802072240/public/assets )
+  INFO [9d672a46] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [e7bacfd1] Running if test ! -d /var/www/ChatSpace/releases/20180802072240; then echo "Directory does not exist '/var/www/ChatSpace/releases/20180802072240'" 1>&2; false; fi as ec2-user@18.179.183.81
+ DEBUG [e7bacfd1] Command: if test ! -d /var/www/ChatSpace/releases/20180802072240; then echo "Directory does not exist '/var/www/ChatSpace/releases/20180802072240'" 1>&2; false; fi
+ DEBUG [eaf8c33f] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [52ffc20f] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/ChatSpace/shared/bundle as ec2-user@18.179.183.81
+ DEBUG [52ffc20f] Command: cd /var/www/ChatSpace/releases/20180802072240 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/ChatSpace/shared/bundle )
+ DEBUG [2890036a] 	Could not locate Gemfile
+ DEBUG [2890036a] Finished in 0.276 seconds with exit status 10 (failed).
+  INFO [4b29eac4] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/ChatSpace/shared/bundle --without development test --deployment --quiet as ec2-user@18.179.183.81
+ DEBUG [4b29eac4] Command: cd /var/www/ChatSpace/releases/20180802072240 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/ChatSpace/shared/bundle --without development test --deployment --quiet )
+ DEBUG [4feb1108] 	Could not locate Gemfile
